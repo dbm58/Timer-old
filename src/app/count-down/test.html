@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <style>
+      body { margin:0; background-color: black; }
+      *
+      {
+        text-align: center;
+      }
+      div div
+      {
+        background-color: yellow;
+      }
+      .container
+      {
+        height:100%;
+        display:grid;
+        grid-template-columns: 20% auto 20%;
+        grid-template-rows: 20% auto 20%;
+        grid-gap: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div style="grid-column: 1/4">one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+      <div style="grid-column: 1/4">five</div>
+    </div>
+  </body>
+</html>

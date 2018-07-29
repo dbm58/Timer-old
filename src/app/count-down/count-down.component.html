@@ -1,0 +1,39 @@
+<div *ngIf="running" id="counter">
+  <div style="grid-column:1/4;">
+    <h1>Rep {{repNum}}</h1>
+
+    <h1>{{action}}</h1>
+  </div>
+
+  <p style="font-size:40vh; grid-column:2; height:100%;" class="counter">{{countDown | date:'m:ss'}}</p>
+</div>
+
+<div id="outer" *ngIf="!running">
+  <div style="grid-row: 1; grid-column: 2; height:100%;">&nbsp;</div>
+
+  <div style="grid-row:2; grid-column:2; height: 100%;" id="parameters">
+    <div class="grid">
+      <label for="repitions">Repitions: </label>
+      <input type="text"
+             [value]="maxReps"
+             (input)="maxReps = $event.target.value"
+             >
+  
+      <label>Soft pedal: </label>
+      <input type="text"
+             [value]="spSecs"
+             (input)="spSecs=$event.target.value"
+             >
+  
+      <label>Go, go, go!: </label>
+      <input type="text"
+             [value]="ggSecs"
+             (input)="ggSecs=$event.target.value"
+             >
+
+      <div id="btn" (click)="startTimer( )">Start</div>
+    </div>
+  
+    <div style="grid-row: 3; height:100%;">&nbsp;</div>
+  </div>
+</div>
